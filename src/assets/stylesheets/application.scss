@@ -1,0 +1,10 @@
+// Config files
+@import "config/setup";
+
+// External libraries
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Stylesheets
+@import "components";
