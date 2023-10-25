@@ -2,11 +2,58 @@
   <div id="welcome">
     <Welcome />
 
-    <section />
+    <section id="other-tools">
+      <ul>
+        <li v-for="tool in tools" :key="tool.name" :class="tool.name">
+          <WelcomeLogoLink :tool="tool" />
+
+          <h2>{{ tool.title }}</h2>
+          <p>{{ tool.description }}</p>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
+  const tools = [
+    {
+      name: "axios",
+      title: "Axios",
+      description: "A promise based HTTP client for the browser and node.js",
+      doc_url: "https://axios-http.com/"
+    },
+    {
+      name: "eslint",
+      title: "esLint",
+      description: "A configurable JavaScript linter to enforce code quality and best practices",
+      doc_url: "https://eslint.org/"
+    },
+    {
+      name: "pnpm",
+      title: "Pnpm",
+      description: "A fast, disk space efficient, node package manager",
+      doc_url: "https://pnpm.io/"
+    },
+    {
+      name: "postcss",
+      title: "PostCSS",
+      description: "A tool for transforming CSS with JavaScript",
+      doc_url: "https://postcss.or"
+    },
+    {
+      name: "unjs",
+      title: "UnJS",
+      description: "A robust ecosystem housing high-quality JavaScript utilities, libraries, and tools.",
+      doc_url: "https://unjs.io/"
+    },
+    {
+      name: "vue-router",
+      title: "Vue Router",
+      description: "An expressive, configurable and convenient routing library for Vue.js",
+      doc_url: "https://router.vuejs.org/"
+    }
+  ]
 </script>
 
 <style lang="scss">
@@ -21,7 +68,7 @@
     margin: 0 auto;
     min-height: 100vh;
     padding: 50px 0;
-    width: Min(1200px, 80%);
+    width: Min(1400px, 80%);
 
     code {
       background-color: #222222;
@@ -40,105 +87,44 @@
       font-family: 'Ubuntu', sans-serif;
     }
 
-    .logo {
-      align-items: center;
-      display: flex;
-      flex-shrink: 0;
-      height: 120px;
-      justify-content: center;
-      position: relative;
-
-      &::before {
-        background-image: linear-gradient(to bottom, #5b87b160, #41b88360);
-        border-radius: 50%;
-        bottom: 50%;
-        content: "";
-        display: block;
-        filter: blur(2em);
-        height: 60px;
-        left: 50%;
-        position: absolute;
-        transition: all 0.3s ease;
-        translate: -50% 50%;
-        width: 60px;
-        z-index: -10;
-      }
-
-      &:hover::before {
-        height: 180px;
-        width: 180px;
-      }
-
-      img {
-        height: 100%;
-      }
-    }
-
-    #tools {
+    #other-tools {
       ul {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
 
         li {
-          align-items: center;
+          align-items: flex-start;
+          border: 1px solid #222222;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           display: flex;
-          gap: 20px;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px;
 
-          &.pinia {
-            h2 {
-              color: #ffd34f ;
-            }
-
-            .logo::before {
-              background-image: linear-gradient(to bottom, #64d67560, #ffd34f60);
-            }
+          &.axios h2 {
+            color: #5a29e4 ;
           }
 
-          &.sass {
-            h2 {
-              color: #cd669a;
-            }
-
-            .logo::before {
-              background-color: #cd669a60;
-            }
+          &.eslint h2 {
+            color: #6464e2 ;
           }
 
-          &.tailwindcss {
-            h2 {
-              background: linear-gradient(to right, #15d0ec, #0d8aa0);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-
-            .logo::before {
-              background-image: linear-gradient(to right, #15d0ec60, #0d8aa060);
-            }
+          &.pnpm h2 {
+            color: #f9ac00 ;
           }
 
-          &.typescript {
-            h2 {
-              color: #3178c6;
-            }
-
-            &.logo::before {
-              background-color: #3178c660;
-            }
+          &.postcss h2 {
+            color: #dd3a0a ;
           }
 
-          &.vite {
-            h2 {
-              background: linear-gradient(135deg, #82d7ff, #a741da);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
+          &.unjs h2 {
+            color: #f0db4f ;
+          }
 
-            .logo::before {
-              background-image: linear-gradient(135deg, #43b3e660, #aa32e560);
-            }
+          &.vue-router h2 {
+            color: #4fc08d ;
           }
 
           .logo {
@@ -147,14 +133,8 @@
             width: 60px;
 
             &::before {
-              filter: blur(1em);
-              height: 10px;
-              width: 10px;
-            }
-
-            &:hover::before {
-              height: 75px;
-              width: 75px;
+              background-color: transparent;
+              background-image: linear-gradient(transparent, transparent);
             }
           }
         }

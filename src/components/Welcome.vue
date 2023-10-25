@@ -6,9 +6,7 @@
     </nav>
 
     <div class="content">
-      <a href="https://vuejs.org/" target="_blank" class="logo">
-        <img src="/images/vue.png" alt="Vue logo">
-      </a>
+      <WelcomeLogoLink :tool="{ name: 'vue', doc_url: 'https://vuejs.org/' }" />
 
       <div>
         <h1>Welcome !</h1>

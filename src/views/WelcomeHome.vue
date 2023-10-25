@@ -5,9 +5,7 @@
     <section id="tools">
       <ul>
         <li v-for="tool in tools" :key="tool.name" :class="tool.name">
-          <a :href="tool.doc_url" target="_blank" class="logo">
-            <img :src="`/images/${tool.name}.png`" :alt="`${tool.name} logo`">
-          </a>
+          <WelcomeLogoLink :tool="tool" />
 
           <div>
             <h2>{{ tool.title }}</h2>
@@ -75,7 +73,7 @@
     margin: 0 auto;
     min-height: 100vh;
     padding: 50px 0;
-    width: Min(1200px, 80%);
+    width: Min(1400px, 80%);
 
     code {
       background-color: #222222;
@@ -92,40 +90,6 @@
 
     span {
       font-family: 'Ubuntu', sans-serif;
-    }
-
-    .logo {
-      align-items: center;
-      display: flex;
-      flex-shrink: 0;
-      height: 120px;
-      justify-content: center;
-      position: relative;
-
-      &::before {
-        background-image: linear-gradient(to bottom, #5b87b160, #41b88360);
-        border-radius: 50%;
-        bottom: 50%;
-        content: "";
-        display: block;
-        filter: blur(2em);
-        height: 60px;
-        left: 50%;
-        position: absolute;
-        transition: all 0.3s ease;
-        translate: -50% 50%;
-        width: 60px;
-        z-index: -10;
-      }
-
-      &:hover::before {
-        height: 180px;
-        width: 180px;
-      }
-
-      img {
-        height: 100%;
-      }
     }
 
     #tools {
