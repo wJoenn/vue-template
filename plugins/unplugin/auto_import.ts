@@ -13,7 +13,8 @@ const unpluginAutoImport = () => (
       "vue-router",
       "pinia",
       {
-        "@unhead/vue": ["useHead", "useSeoMeta"]
+        "@unhead/vue": ["useHead", "useSeoMeta"],
+        "axios": [["default", "axios"]]
       }
     ]
   })
