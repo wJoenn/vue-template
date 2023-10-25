@@ -25,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-  import { toRefs } from "vue"
-  import { useRoute } from "vue-router"
   import useWelcomeStore from "~/stores/WelcomeStore.ts"
 
   const route = useRoute()

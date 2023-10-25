@@ -21,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-  import Welcome from "~/components/Welcome.vue"
-
   const tools = [
     {
       name: "sass",

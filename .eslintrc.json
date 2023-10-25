@@ -8,7 +8,10 @@
     "airbnb-base",
     "plugin:import/recommended",
     "plugin:vue/vue3-recommended",
-    "@vue/eslint-config-typescript"
+    "@vue/eslint-config-typescript",
+
+    "./plugins/unplugin/eslint/.eslintrc-auto-import.json",
+    "./plugins/unplugin/eslint/.eslintrc-components.json"
   ],
   "ignorePatterns": [
     "node_modules"
