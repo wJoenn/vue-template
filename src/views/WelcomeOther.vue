@@ -5,9 +5,11 @@
     <section id="other-tools">
       <ul>
         <li v-for="tool in tools" :key="tool.name" :class="tool.name">
-          <WelcomeLogoLink :tool="tool" />
+          <div>
+            <h2>{{ tool.title }}</h2>
+            <WelcomeLogoLink :tool="tool" />
+          </div>
 
-          <h2>{{ tool.title }}</h2>
           <p>{{ tool.description }}</p>
         </li>
       </ul>
@@ -79,7 +81,7 @@
 
     h2 {
       font-family: 'Ubuntu', sans-serif;
-      font-size: 20px;
+      font-size: 25px;
       width: max-content;
     }
 
@@ -95,7 +97,7 @@
 
         li {
           align-items: flex-start;
-          border: 1px solid #222222;
+          border: 1px solid #22222260;
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           display: flex;
@@ -127,14 +129,21 @@
             color: #4fc08d ;
           }
 
-          .logo {
-            flex-shrink: 0;
-            height: 60px;
-            width: 60px;
+          > div {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
 
-            &::before {
-              background-color: transparent;
-              background-image: linear-gradient(transparent, transparent);
+            .logo {
+              flex-shrink: 0;
+              height: 50px;
+              width: 50px;
+
+              &::before {
+                background-color: transparent;
+                background-image: linear-gradient(transparent, transparent);
+              }
             }
           }
         }
