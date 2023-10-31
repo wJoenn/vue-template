@@ -1,5 +1,6 @@
 import path from "path"
 import AutoImport from "unplugin-auto-import/vite"
+import { VueRouterAutoImports } from "unplugin-vue-router"
 
 const unpluginAutoImport = () => (
   AutoImport({
@@ -9,12 +10,13 @@ const unpluginAutoImport = () => (
       filepath: path.resolve(__dirname, "eslint/.eslintrc-auto-import.json")
     },
     imports: [
-      "vue",
-      "vue-router",
       "pinia",
+      "vue",
+      VueRouterAutoImports,
       {
         "@unhead/vue": ["useHead", "useSeoMeta"],
-        "axios": [["default", "axios"]]
+        "axios": [["default", "axios"]],
+        "vue-router/auto": ["createRouter", "createWebHistory"]
       }
     ]
   })

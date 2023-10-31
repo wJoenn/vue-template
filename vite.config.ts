@@ -1,9 +1,9 @@
+/* eslint import/extensions: 0, import/no-unresolved: 0 */
 import path from "path"
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import UnheadVite from "@unhead/addons/vite"
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import { unpluginAutoImport, unpluginVueComponents } from "./plugins/unplugin"
+import { unpluginAutoImport, unpluginVueComponents, unpluginVueRouter } from "./plugins/unplugin"
 
 export default defineConfig({
   css: {
@@ -14,10 +14,11 @@ export default defineConfig({
     }
   },
   plugins: [
-    vue(),
     UnheadVite(),
     unpluginAutoImport(),
-    unpluginVueComponents()
+    unpluginVueComponents(),
+    unpluginVueRouter(),
+    vue()
   ],
   resolve: {
     alias: {

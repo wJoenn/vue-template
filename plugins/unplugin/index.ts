@@ -1,4 +1,6 @@
-import unpluginAutoImport from "./auto_import" // eslint-disable-line import/extensions, import/no-unresolved
-import unpluginVueComponents from "./vue_components" // eslint-disable-line import/extensions, import/no-unresolved
+/* eslint import/extensions: 0, import/no-unresolved: 0 */
+import unpluginAutoImport from "./auto_import"
+import unpluginVueComponents from "./vue_components"
+import unpluginVueRouter from "./vue-router"
 
-export { unpluginAutoImport, unpluginVueComponents }
+export { unpluginAutoImport, unpluginVueComponents, unpluginVueRouter }

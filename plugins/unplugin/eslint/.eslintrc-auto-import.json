@@ -82,6 +82,10 @@
     "watchEffect": true,
     "watchPostEffect": true,
     "watchSyncEffect": true,
-    "axios": true
+    "axios": true,
+    "defineLoader": true,
+    "definePage": true,
+    "createRouter": true,
+    "createWebHistory": true
   }
 }

@@ -1,8 +1,8 @@
 <template>
   <section id="vue">
     <nav>
-      <router-link :to="{ name: 'WelcomeHome' }" :class="{ active: !/other/.test(route.path)}">Main Tools</router-link>
-      <router-link :to="{ name: 'WelcomeOther' }" :class="{ active: /other/.test(route.path)}">Other Tools</router-link>
+      <router-link :to="{ name: 'Welcome' }" :class="{ active: !/other/.test(route.path)}">Main Tools</router-link>
+      <router-link :to="{ name: 'WelcomeOthers' }" :class="{ active: /other/.test(route.path)}">Other Tools</router-link>
     </nav>
 
     <div class="content">
