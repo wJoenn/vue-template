@@ -23,6 +23,6 @@
     /* Linting */
     "strict": true
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "plugins/**/*.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.vue", "plugins/**/*.d.ts", "env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
