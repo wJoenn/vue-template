@@ -4,6 +4,7 @@ import { VueRouterAutoImports } from "unplugin-vue-router"
 
 const unpluginAutoImport = () => (
   AutoImport({
+    dirs: [path.resolve(__dirname, "../../vuenn")],
     dts: path.resolve(__dirname, "auto-import.d.ts"),
     eslintrc: {
       enabled: true,

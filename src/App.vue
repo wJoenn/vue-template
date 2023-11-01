@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-  import useLayout from "~/composables/useLayouts.ts"
-
   const Layout = useLayout()
 </script>
 

@@ -72,6 +72,7 @@ declare global {
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
   const useHead: typeof import('@unhead/vue')['useHead']
+  const useLayout: typeof import('../../vuenn/useLayout')['default']
   const useRoute: typeof import('vue-router/auto')['useRoute']
   const useRouter: typeof import('vue-router/auto')['useRouter']
   const useSeoMeta: typeof import('@unhead/vue')['useSeoMeta']
