@@ -1,23 +1,25 @@
 <template>
-  <div id="welcome">
-    <Welcome />
+  <section id="other-tools">
+    <ul>
+      <li v-for="tool in tools" :key="tool.name" :class="tool.name">
+        <div>
+          <h2>{{ tool.title }}</h2>
+          <WelcomeLogoLink :tool="tool" />
+        </div>
 
-    <section id="other-tools">
-      <ul>
-        <li v-for="tool in tools" :key="tool.name" :class="tool.name">
-          <div>
-            <h2>{{ tool.title }}</h2>
-            <WelcomeLogoLink :tool="tool" />
-          </div>
-
-          <p>{{ tool.description }}</p>
-        </li>
-      </ul>
-    </section>
-  </div>
+        <p>{{ tool.description }}</p>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script setup lang="ts">
+  definePage({
+    meta: {
+      layout: "welcome"
+    }
+  })
+
   const tools = [
     {
       name: "axios",
@@ -59,99 +61,64 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu&display=swap');
+  #other-tools {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
 
-  #welcome {
-    align-items: center;
-    display: grid;
-    font-family: 'Roboto', sans-serif;
-    gap: 50px;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    min-height: 100vh;
-    padding: 50px 0;
-    width: Min(1400px, 80%);
+      li {
+        align-items: flex-start;
+        border: 1px solid #22222260;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
 
-    code {
-      background-color: #222222;
-      border-radius: 5px;
-      font-family: 'Ubuntu', sans-serif;
-      padding: 0.25rem 0.5rem;
-    }
+        &.axios h2 {
+          color: #5a29e4 ;
+        }
 
-    h2 {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 25px;
-      width: max-content;
-    }
+        &.eslint h2 {
+          color: #6464e2 ;
+        }
 
-    span {
-      font-family: 'Ubuntu', sans-serif;
-    }
+        &.pnpm h2 {
+          color: #f9ac00 ;
+        }
 
-    #other-tools {
-      ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        &.postcss h2 {
+          color: #dd3a0a ;
+        }
 
-        li {
-          align-items: flex-start;
-          border: 1px solid #22222260;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        &.unjs h2 {
+          color: #f0db4f ;
+        }
+
+        &.vue-router h2 {
+          color: #4fc08d ;
+        }
+
+        > div {
+          align-items: center;
           display: flex;
-          flex-direction: column;
-          gap: 10px;
-          padding: 20px;
+          justify-content: space-between;
+          width: 100%;
 
-          &.axios h2 {
-            color: #5a29e4 ;
-          }
+          .logo {
+            flex-shrink: 0;
+            height: 50px;
+            width: 50px;
 
-          &.eslint h2 {
-            color: #6464e2 ;
-          }
-
-          &.pnpm h2 {
-            color: #f9ac00 ;
-          }
-
-          &.postcss h2 {
-            color: #dd3a0a ;
-          }
-
-          &.unjs h2 {
-            color: #f0db4f ;
-          }
-
-          &.vue-router h2 {
-            color: #4fc08d ;
-          }
-
-          > div {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-
-            .logo {
-              flex-shrink: 0;
-              height: 50px;
-              width: 50px;
-
-              &::before {
-                background-color: transparent;
-                background-image: linear-gradient(transparent, transparent);
-              }
+            &::before {
+              background-color: transparent;
+              background-image: linear-gradient(transparent, transparent);
             }
           }
         }
       }
-    }
-
-    @media screen and (min-width: 990px) {
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

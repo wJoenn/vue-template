@@ -1,24 +1,26 @@
 <template>
-  <div id="welcome">
-    <Welcome />
+  <section id="tools">
+    <ul>
+      <li v-for="tool in tools" :key="tool.name" :class="tool.name">
+        <WelcomeLogoLink :tool="tool" />
 
-    <section id="tools">
-      <ul>
-        <li v-for="tool in tools" :key="tool.name" :class="tool.name">
-          <WelcomeLogoLink :tool="tool" />
-
-          <div>
-            <h2>{{ tool.title }}</h2>
-            <!-- eslint-disable-next-line vue/no-v-html -->
-            <p v-html="tool.description" />
-          </div>
-        </li>
-      </ul>
-    </section>
-  </div>
+        <div>
+          <h2>{{ tool.title }}</h2>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <p v-html="tool.description" />
+        </div>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script setup lang="ts">
+  definePage({
+    meta: {
+      layout: "welcome"
+    }
+  })
+
   const tools = [
     {
       name: "sass",
@@ -61,126 +63,91 @@
   ]
 </script>
 
-<style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu&display=swap');
+<style scoped lang="scss">
+  #tools {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-  #welcome {
-    align-items: center;
-    display: grid;
-    font-family: 'Roboto', sans-serif;
-    gap: 50px;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    min-height: 100vh;
-    padding: 50px 0;
-    width: Min(1400px, 80%);
-
-    code {
-      background-color: #222222;
-      border-radius: 5px;
-      font-family: 'Ubuntu', sans-serif;
-      padding: 0.25rem 0.5rem;
-    }
-
-    h2 {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 20px;
-      width: max-content;
-    }
-
-    span {
-      font-family: 'Ubuntu', sans-serif;
-    }
-
-    #tools {
-      ul {
+      li {
+        align-items: center;
         display: flex;
-        flex-direction: column;
         gap: 20px;
 
-        li {
-          align-items: center;
-          display: flex;
-          gap: 20px;
-
-          &.pinia {
-            h2 {
-              color: #ffd34f ;
-            }
-
-            .logo::before {
-              background-image: linear-gradient(to bottom, #64d67560, #ffd34f60);
-            }
+        &.pinia {
+          h2 {
+            color: #ffd34f ;
           }
 
-          &.sass {
-            h2 {
-              color: #cd669a;
-            }
+          .logo::before {
+            background-image: linear-gradient(to bottom, #64d67560, #ffd34f60);
+          }
+        }
 
-            .logo::before {
-              background-color: #cd669a60;
-            }
+        &.sass {
+          h2 {
+            color: #cd669a;
           }
 
-          &.tailwindcss {
-            h2 {
-              background: linear-gradient(to right, #15d0ec, #0d8aa0);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
+          .logo::before {
+            background-color: #cd669a60;
+          }
+        }
 
-            .logo::before {
-              background-image: linear-gradient(to right, #15d0ec60, #0d8aa060);
-            }
+        &.tailwindcss {
+          h2 {
+            background: linear-gradient(to right, #15d0ec, #0d8aa0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-          &.typescript {
-            h2 {
-              color: #3178c6;
-            }
+          .logo::before {
+            background-image: linear-gradient(to right, #15d0ec60, #0d8aa060);
+          }
+        }
 
-            &.logo::before {
-              background-color: #3178c660;
-            }
+        &.typescript {
+          h2 {
+            color: #3178c6;
           }
 
-          &.vite {
-            h2 {
-              background: linear-gradient(135deg, #82d7ff, #a741da);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
+          &.logo::before {
+            background-color: #3178c660;
+          }
+        }
 
-            .logo::before {
-              background-image: linear-gradient(135deg, #43b3e660, #aa32e560);
-            }
+        &.vite {
+          h2 {
+            background: linear-gradient(135deg, #82d7ff, #a741da);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-          .logo {
-            flex-shrink: 0;
-            height: 60px;
-            width: 60px;
+          .logo::before {
+            background-image: linear-gradient(135deg, #43b3e660, #aa32e560);
+          }
+        }
 
-            &::before {
-              filter: blur(1em);
-              height: 10px;
-              width: 10px;
-            }
+        .logo {
+          flex-shrink: 0;
+          height: 60px;
+          width: 60px;
 
-            &:hover::before {
-              height: 75px;
-              width: 75px;
-            }
+          &::before {
+            filter: blur(1em);
+            height: 10px;
+            width: 10px;
+          }
+
+          &:hover::before {
+            height: 75px;
+            width: 75px;
           }
         }
       }
-    }
-
-    @media screen and (min-width: 990px) {
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
