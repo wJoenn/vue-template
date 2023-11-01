@@ -7,12 +7,12 @@ const unpluginVueComponents = () => {
 
   return Components({
     dirs: ["src/components"],
-    dts: path.resolve(__dirname, "types/components.d.ts")
+    dts: path.resolve(__dirname, "components.d.ts")
   })
 }
 
 const createEslintComponentsFile = () => {
-  const components = path.resolve(__dirname, "../../src/components")
+  const components = path.resolve(__dirname, "../../../components")
 
   const eslintrc = {
     rules: {
@@ -23,7 +23,7 @@ const createEslintComponentsFile = () => {
   }
 
   const eslintrcJson = JSON.stringify(eslintrc, null, 2)
-  fs.writeFileSync(`${__dirname}/eslint/.eslintrc-components.json`, eslintrcJson)
+  fs.writeFileSync(path.resolve(__dirname, ".eslintrc-components.json"), eslintrcJson)
 }
 
 const getComponents = (pathName: string) => {

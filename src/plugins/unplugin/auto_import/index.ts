@@ -4,10 +4,10 @@ import { VueRouterAutoImports } from "unplugin-vue-router"
 
 const unpluginAutoImport = () => (
   AutoImport({
-    dts: path.resolve(__dirname, "types/auto-import.d.ts"),
+    dts: path.resolve(__dirname, "auto-import.d.ts"),
     eslintrc: {
       enabled: true,
-      filepath: path.resolve(__dirname, "eslint/.eslintrc-auto-import.json")
+      filepath: path.resolve(__dirname, ".eslintrc-auto-import.json")
     },
     imports: [
       "pinia",

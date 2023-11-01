@@ -13,12 +13,17 @@
     "VNode": true,
     "WritableComputedRef": true,
     "acceptHMRUpdate": true,
+    "axios": true,
     "computed": true,
     "createApp": true,
     "createPinia": true,
+    "createRouter": true,
+    "createWebHistory": true,
     "customRef": true,
     "defineAsyncComponent": true,
     "defineComponent": true,
+    "defineLoader": true,
+    "definePage": true,
     "defineStore": true,
     "effectScope": true,
     "getActivePinia": true,
@@ -73,7 +78,6 @@
     "useCssModule": true,
     "useCssVars": true,
     "useHead": true,
-    "useLink": true,
     "useRoute": true,
     "useRouter": true,
     "useSeoMeta": true,
@@ -81,11 +85,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "axios": true,
-    "defineLoader": true,
-    "definePage": true,
-    "createRouter": true,
-    "createWebHistory": true
+    "watchSyncEffect": true
   }
 }

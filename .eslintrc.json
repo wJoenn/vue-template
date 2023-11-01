@@ -10,8 +10,8 @@
     "plugin:vue/vue3-recommended",
     "@vue/eslint-config-typescript",
 
-    "./plugins/unplugin/eslint/.eslintrc-auto-import.json",
-    "./plugins/unplugin/eslint/.eslintrc-components.json"
+    "./src/plugins/unplugin/auto_import/.eslintrc-auto-import.json",
+    "./src/plugins/unplugin/vue_components/.eslintrc-components.json"
   ],
   "ignorePatterns": [
     "node_modules"
