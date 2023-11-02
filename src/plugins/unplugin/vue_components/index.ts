@@ -12,12 +12,12 @@ const unpluginVueComponents = () => {
 }
 
 const createEslintComponentsFile = () => {
-  const components = path.resolve(__dirname, "../../../components")
+  const componentsDir = path.resolve(__dirname, "../../../components")
 
   const eslintrc = {
     rules: {
       "vue/component-name-in-template-casing": ["error", "PascalCase", {
-        globals: getComponents(components)
+        globals: getComponents(componentsDir)
       }]
     }
   }
@@ -26,21 +26,16 @@ const createEslintComponentsFile = () => {
   fs.writeFileSync(path.resolve(__dirname, ".eslintrc-components.json"), eslintrcJson)
 }
 
-const getComponents = (pathName: string) => {
-  let files: string[] = []
+const getComponents = (componentsDir: string): string[] => (
+  fs
+    .readdirSync(componentsDir)
+    .flatMap(file => {
+      const filePath = path.join(componentsDir, file)
+      const stat = fs.statSync(filePath)
 
-  fs.readdirSync(pathName).forEach(file => {
-    const filePath = path.join(pathName, file)
-    const stat = fs.statSync(filePath)
-
-    if (stat.isDirectory()) {
-      files = files.concat(getComponents(filePath))
-    } else {
-      files.push(file)
-    }
-  })
-
-  return files.map(file => file.replace(".vue", "")).sort()
-}
+      return stat.isDirectory() ? getComponents(filePath) : [file.replace(".vue", "")]
+    })
+    .sort()
+)
 
 export default unpluginVueComponents
