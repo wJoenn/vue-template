@@ -12,21 +12,18 @@ const unpluginVueComponents = () => {
 }
 
 const createEslintComponentsFile = () => {
-  const componentsDir = path.resolve(__dirname, "../../../components")
-
   const eslintrc = {
     rules: {
       "vue/component-name-in-template-casing": ["error", "PascalCase", {
-        globals: getComponents(componentsDir)
+        globals: getComponents()
       }]
     }
   }
 
-  const eslintrcJson = JSON.stringify(eslintrc, null, 2)
-  fs.writeFileSync(path.resolve(__dirname, ".eslintrc-components.json"), eslintrcJson)
+  fs.writeFileSync(path.resolve(__dirname, ".eslintrc-components.json"), JSON.stringify(eslintrc, null, 2))
 }
 
-const getComponents = (componentsDir: string): string[] => (
+const getComponents = (componentsDir = path.resolve(__dirname, "../../../components")): string[] => (
   fs
     .readdirSync(componentsDir)
     .flatMap(file => {
