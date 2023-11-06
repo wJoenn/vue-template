@@ -29,8 +29,8 @@ devDependencies:
     specifier: <19
     version: 18.18.7
   '@unhead/addons':
-    specifier: ^1.8.2
-    version: 1.8.2
+    specifier: ^1.8.3
+    version: 1.8.3
   '@vitejs/plugin-vue':
     specifier: ^4.4.0
     version: 4.4.0(vite@4.5.0)(vue@3.3.8)
@@ -617,12 +617,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.8.2:
-    resolution: {integrity: sha512-0FQiB9dL49lQgJNjXEkS6CDNBBMWp/foc8ETcFz38ZqteP2k+Y7n4SAGwXCUYLZUQesSBJiUZbWkj7ZRU55Jxg==}
+  /@unhead/addons@1.8.3:
+    resolution: {integrity: sha512-gc2cmrHLCxfxn4RVsDWKi4FZnV9wAoxxeqP7BQV58TRctfjH+/GMib0qXProuZx//Qd2mndtDHC1i4GPUWXaEw==}
     dependencies:
       '@rollup/pluginutils': 5.0.5
-      '@unhead/schema': 1.8.2
-      '@unhead/shared': 1.8.2
+      '@unhead/schema': 1.8.3
+      '@unhead/shared': 1.8.3
       magic-string: 0.30.5
       mlly: 1.4.2
       ufo: 1.3.1
@@ -639,31 +639,16 @@ packages:
       '@unhead/shared': 1.8.3
     dev: false
 
-  /@unhead/schema@1.8.2:
-    resolution: {integrity: sha512-bpCv8ualep2aqbhkBXUKfhYICi35+Pb1CBc5v6oJHHJgHKBIAbBQpbpi14amRMnRuSYDeSOCEM6SV8OJntcNDA==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.8.3:
     resolution: {integrity: sha512-3XbcJzdlyLr/RV2TKaygI21YorlU6XPgHn/MoWjQvH4PYiHkH8PtTGg8Je6k3gvcUURSiDfucFKaGEYdJXAVqQ==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
-    dev: false
-
-  /@unhead/shared@1.8.2:
-    resolution: {integrity: sha512-GDrUDN3x2anpNQQOgjmKjpi2ygNsBAwok9C6Z1YCeM2YtjF1lhqF9cTCXaapNEq81FkC0R0LTgnVxa/HJ4n3lQ==}
-    dependencies:
-      '@unhead/schema': 1.8.2
-    dev: true
 
   /@unhead/shared@1.8.3:
     resolution: {integrity: sha512-E1knEiAO0iENLzZd+LjWA4mUp8JRaSxo5V0vMjSENyf5hSVB/SxAVjDPmTIelLY7KrP5mJrNMen2ZmQrr/AZJw==}
     dependencies:
       '@unhead/schema': 1.8.3
-    dev: false
 
   /@unhead/vue@1.8.3(vue@3.3.8):
     resolution: {integrity: sha512-sj/1VosMreUQXd68rn5jDLdpgFVdN0mKrjW/8eZMWbomZkzbzs7FxyRUApd584xNjFVdtyWrTepmrNSKmEwKgg==}
