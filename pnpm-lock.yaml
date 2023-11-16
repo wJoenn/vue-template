@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.9.0
     version: 20.9.0
   '@unhead/addons':
-    specifier: ^1.8.3
-    version: 1.8.3
+    specifier: ^1.8.4
+    version: 1.8.4
   '@vitejs/plugin-vue':
     specifier: ^4.4.1
     version: 4.4.1(vite@4.5.0)(vue@3.3.8)
@@ -617,12 +617,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.8.3:
-    resolution: {integrity: sha512-gc2cmrHLCxfxn4RVsDWKi4FZnV9wAoxxeqP7BQV58TRctfjH+/GMib0qXProuZx//Qd2mndtDHC1i4GPUWXaEw==}
+  /@unhead/addons@1.8.4:
+    resolution: {integrity: sha512-l7QVlzE1DH9/+kSl0HSgOkeXA+MmvEV5r4Bu7iM894lV6D/GRjbtc6my/WGw+t18UmKIHdfWBbWBLbtWTGBAbQ==}
     dependencies:
       '@rollup/pluginutils': 5.0.5
-      '@unhead/schema': 1.8.3
-      '@unhead/shared': 1.8.3
+      '@unhead/schema': 1.8.4
+      '@unhead/shared': 1.8.4
       magic-string: 0.30.5
       mlly: 1.4.2
       ufo: 1.3.1
@@ -639,31 +639,16 @@ packages:
       '@unhead/shared': 1.8.4
     dev: false
 
-  /@unhead/schema@1.8.3:
-    resolution: {integrity: sha512-3XbcJzdlyLr/RV2TKaygI21YorlU6XPgHn/MoWjQvH4PYiHkH8PtTGg8Je6k3gvcUURSiDfucFKaGEYdJXAVqQ==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.8.4:
     resolution: {integrity: sha512-Lfeu123sFpqUJbFYIWUygUXjTq9TTtEH148VV8iiN1NC4THa7GeDgHWbb7FbigV9c5pFTGI7oREHKFCaTtLGSg==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
-    dev: false
-
-  /@unhead/shared@1.8.3:
-    resolution: {integrity: sha512-E1knEiAO0iENLzZd+LjWA4mUp8JRaSxo5V0vMjSENyf5hSVB/SxAVjDPmTIelLY7KrP5mJrNMen2ZmQrr/AZJw==}
-    dependencies:
-      '@unhead/schema': 1.8.3
-    dev: true
 
   /@unhead/shared@1.8.4:
     resolution: {integrity: sha512-DXgzbFPqdrms2TLJzmjG1F1tZPyejuCF95AF0cz/GjVEJErEyBMKyhWogVbkyYqPGiVCQT1uCKMYucuM9LhdZw==}
     dependencies:
       '@unhead/schema': 1.8.4
-    dev: false
 
   /@unhead/vue@1.8.4(vue@3.3.8):
     resolution: {integrity: sha512-U2rXe5qocVK5qHaEj5/V2VimHVWbc6IJ4PpjpD7IwgN8uhxSt9oxNObhLIyRzdqim13PoAfS+zUAwFii4y0hpQ==}
