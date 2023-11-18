@@ -43,7 +43,7 @@ const unpluginVueRouter = () => {
     }),
     VueRouter({
       dts: path.resolve(__dirname, "typed-router.d.ts"),
-      getRouteName: (routeNode) => getPascalCaseRouteName(routeNode)
+      getRouteName: routeNode => getPascalCaseRouteName(routeNode)
     })
   ]
 }
