@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.cjs,.mjs,.ts,.cts,.mts --max-warnings=0"
   },
   "dependencies": {
-    "@unhead/vue": "^1.8.8",
+    "@unhead/vue": "^1.8.9",
     "axios": "^1.6.2",
     "pinia": "^2.1.7",
     "vue": "^3.3.10",
