@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.10.4
     version: 20.10.4
   '@unhead/addons':
-    specifier: ^1.8.8
-    version: 1.8.8
+    specifier: ^1.8.9
+    version: 1.8.9
   '@vitejs/plugin-vue':
     specifier: ^4.5.2
     version: 4.5.2(vite@5.0.8)(vue@3.3.11)
@@ -113,14 +113,6 @@ packages:
   /@babel/helper-validator-identifier@7.22.20:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
-
-  /@babel/parser@7.23.0:
-    resolution: {integrity: sha512-vvPKKdMemU85V9WE/l5wZEmImpCtLqbnTvqDS2U1fJ96KrxoW7KrXhNsNCblQlg8Ck4b85yxdTyelsMUgFUXiw==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.23.0
-    dev: true
 
   /@babel/parser@7.23.5:
     resolution: {integrity: sha512-hOOqoiNXrmGdFbhgCzu6GiURxUgM27Xwd/aPuu8RfHEZPBzL1Z54okAHAQjXfcQNwvrlkAmAp4SlRTZ45vlthQ==}
@@ -732,12 +724,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.8.8:
-    resolution: {integrity: sha512-P7RsRCB9sB0r2shN8kkfylSIRQSvA+5TVpdZOAp5nU7+2L+JRhO0AwiYv9Oo/5w6ScOrHKYxHJkQ39ED7UxzdQ==}
+  /@unhead/addons@1.8.9:
+    resolution: {integrity: sha512-SXMp3EyWKCsvAwlFVvrC65kBgZbg7hm2NLzboMEsa1vTGfb4fQCx1e0IgDQuMDCs8LKPAhYjuxZKbB6Bmi4GEQ==}
     dependencies:
-      '@rollup/pluginutils': 5.0.5
-      '@unhead/schema': 1.8.8
-      '@unhead/shared': 1.8.8
+      '@rollup/pluginutils': 5.1.0
+      '@unhead/schema': 1.8.9
+      '@unhead/shared': 1.8.9
       magic-string: 0.30.5
       mlly: 1.4.2
       ufo: 1.3.2
@@ -754,31 +746,16 @@ packages:
       '@unhead/shared': 1.8.9
     dev: false
 
-  /@unhead/schema@1.8.8:
-    resolution: {integrity: sha512-xuhNW4osVNLW1yQSbdInZ8YGiXVTi1gjF8rK1E4VnODpWLg8XOq0OpoCbdIlCH4X4A0Ee0UQGRyzkuuVZlrSsQ==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.8.9:
     resolution: {integrity: sha512-Cumjt2uLfBMEXflvq7Nk8KNqa/JS4MlRGWkjXx/uUXJ1vUeQqeMV8o3hrnRvDDoTXr9LwPapTMUbtClN3TSBgw==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
-    dev: false
-
-  /@unhead/shared@1.8.8:
-    resolution: {integrity: sha512-LoIJUDgmOzxoRHSIf29w/wc+IzKN2XvGiQC2dZZrYoTjOOzodf75609PEW5bhx2aHio38k9F+6BnD3KDiJ7IIg==}
-    dependencies:
-      '@unhead/schema': 1.8.8
-    dev: true
 
   /@unhead/shared@1.8.9:
     resolution: {integrity: sha512-0o4+CBCi9EnTKPF6cEuLacnUHUkF0u/FfiKrWnKWUiB8wTD1v3UCf5ZCrNCjuJmKHTqj6ZtZ2hIfXsqWfc+3tA==}
     dependencies:
       '@unhead/schema': 1.8.9
-    dev: false
 
   /@unhead/vue@1.8.9(vue@3.3.11):
     resolution: {integrity: sha512-sL1d2IRBZd5rjzhgTYni2DiociSpt+Cfz3iVWKb0EZwQHgg0GzV8Hkoj5TjZYZow6EjDSPRfVPXDwOwxkVOgug==}
@@ -832,7 +809,7 @@ packages:
         optional: true
     dependencies:
       '@babel/types': 7.23.0
-      '@rollup/pluginutils': 5.0.5
+      '@rollup/pluginutils': 5.1.0
       '@vue/compiler-sfc': 3.3.10
       ast-kit: 0.11.2
       local-pkg: 0.4.3
@@ -1138,7 +1115,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@babel/parser': 7.23.5
-      '@rollup/pluginutils': 5.0.5
+      '@rollup/pluginutils': 5.1.0
       pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
@@ -1149,7 +1126,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@babel/parser': 7.23.5
-      '@rollup/pluginutils': 5.0.5
+      '@rollup/pluginutils': 5.1.0
       pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
@@ -1160,7 +1137,7 @@ packages:
     engines: {node: '>=16.14.0'}
     dependencies:
       '@babel/parser': 7.23.5
-      '@rollup/pluginutils': 5.0.5
+      '@rollup/pluginutils': 5.1.0
       pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
@@ -3227,8 +3204,8 @@ packages:
     dependencies:
       '@antfu/utils': 0.7.6
       '@babel/generator': 7.23.0
-      '@babel/parser': 7.23.0
-      '@rollup/pluginutils': 5.0.5
+      '@babel/parser': 7.23.5
+      '@rollup/pluginutils': 5.1.0
       ast-kit: 0.6.9
       magic-string-ast: 0.1.3
       unplugin: 1.5.1
