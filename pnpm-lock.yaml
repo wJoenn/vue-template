@@ -62,8 +62,8 @@ devDependencies:
     specifier: ^5.3.3
     version: 5.3.3
   unplugin-auto-import:
-    specifier: ^0.17.3
-    version: 0.17.3
+    specifier: ^0.17.4
+    version: 0.17.4
   unplugin-vue-components:
     specifier: ^0.26.0
     version: 0.26.0(vue@3.4.15)
@@ -3319,8 +3319,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-auto-import@0.17.3:
-    resolution: {integrity: sha512-0cn0wr8X579TtdZKUAps0dDVrYzttx38ImdxZjmCeNlMDJX8UuSjO83vFqgS4ClNDIGWAute+xl9j5vRSX+vsw==}
+  /unplugin-auto-import@0.17.4:
+    resolution: {integrity: sha512-sInr7+UOeFMtiRCr7lYZXouTnVqXNUJtN5yN5GDzg6Sr2rwY5ZWZmqf4yvItYCm8mq1PdzPw3oojYHgZAJnTRQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': ^3.2.2
