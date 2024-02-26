@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^0.26.0
     version: 0.26.0(vue@3.4.20)
   unplugin-vue-router:
-    specifier: ^0.8.3
-    version: 0.8.3(vue-router@4.3.0)(vue@3.4.20)
+    specifier: ^0.8.4
+    version: 0.8.4(vue-router@4.3.0)(vue@3.4.20)
   vite:
     specifier: ^5.1.4
     version: 5.1.4(@types/node@20.11.19)(sass@1.71.1)
@@ -841,7 +841,7 @@ packages:
     dependencies:
       '@babel/types': 7.23.9
       '@rollup/pluginutils': 5.1.0
-      '@vue/compiler-sfc': 3.4.19
+      '@vue/compiler-sfc': 3.4.20
       ast-kit: 0.11.3
       local-pkg: 0.5.0
       magic-string-ast: 0.3.0
@@ -882,20 +882,6 @@ packages:
       '@vue/compiler-core': 3.4.20
       '@vue/shared': 3.4.20
 
-  /@vue/compiler-sfc@3.4.19:
-    resolution: {integrity: sha512-LQ3U4SN0DlvV0xhr1lUsgLCYlwQfUfetyPxkKYu7dkfvx7g3ojrGAkw0AERLOKYXuAGnqFsEuytkdcComei3Yg==}
-    dependencies:
-      '@babel/parser': 7.23.9
-      '@vue/compiler-core': 3.4.19
-      '@vue/compiler-dom': 3.4.19
-      '@vue/compiler-ssr': 3.4.19
-      '@vue/shared': 3.4.19
-      estree-walker: 2.0.2
-      magic-string: 0.30.7
-      postcss: 8.4.35
-      source-map-js: 1.0.2
-    dev: true
-
   /@vue/compiler-sfc@3.4.20:
     resolution: {integrity: sha512-nPuTZz0yxTPzjyYe+9nQQsFYImcz/57UX8N3jyhl5oIUUs2jqqAMaULsAlJwve3qNYfjQzq0bwy3pqJrN9ecZw==}
     dependencies:
@@ -908,13 +894,6 @@ packages:
       magic-string: 0.30.7
       postcss: 8.4.35
       source-map-js: 1.0.2
-
-  /@vue/compiler-ssr@3.4.19:
-    resolution: {integrity: sha512-P0PLKC4+u4OMJ8sinba/5Z/iDT84uMRRlrWzadgLA69opCpI1gG4N55qDSC+dedwq2fJtzmGald05LWR5TFfLw==}
-    dependencies:
-      '@vue/compiler-dom': 3.4.19
-      '@vue/shared': 3.4.19
-    dev: true
 
   /@vue/compiler-ssr@3.4.20:
     resolution: {integrity: sha512-b3gFQPiHLvI12C56otzBPpQhZ5kgkJ5RMv/zpLjLC2BIFwX5GktDqYQ7xg0Q2grP6uFI8al3beVKvAVxFtXmIg==}
@@ -3413,8 +3392,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-vue-router@0.8.3(vue-router@4.3.0)(vue@3.4.20):
-    resolution: {integrity: sha512-I0HXIGUrdzwIKQ9YEyI3HEMpHsWs/V7KaEqcwXYREABhrRT6Hfmgz/em+2CgbbJ5IFMiWLBYIJ2+6fZGKuJluw==}
+  /unplugin-vue-router@0.8.4(vue-router@4.3.0)(vue@3.4.20):
+    resolution: {integrity: sha512-BdXzOEh7ta6v7qmTxkNcBqjeYBQN2LR34AqvSDLsfjlGd0CgV4qhue3T5btHiZK2EGtsdRb7i9f9CpxMLSnXzw==}
     peerDependencies:
       vue-router: ^4.3.0
     peerDependenciesMeta:
