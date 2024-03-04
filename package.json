@@ -20,7 +20,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@types/node": "^20.11.24",
-    "@unhead/addons": "^1.8.10",
+    "@unhead/addons": "^1.8.11",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-typescript": "^12.0.0",
     "autoprefixer": "^10.4.17",
