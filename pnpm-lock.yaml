@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.11.26
     version: 20.11.26
   '@unhead/addons':
-    specifier: ^1.8.11
-    version: 1.8.11
+    specifier: ^1.8.14
+    version: 1.8.14
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.1.6)(vue@3.4.21)
@@ -747,16 +747,16 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.8.11:
-    resolution: {integrity: sha512-m+mTq6J1YkQCCQOrVZopmKy93N3lMuyyP93zWSI4v7ixX1nfEncRYiCAwW1unWaDCbEnBwpGjSKW/mqjoPWfHg==}
+  /@unhead/addons@1.8.14:
+    resolution: {integrity: sha512-y+nD1HiFZ132EN3elJ9WT+f6czkYhuVRpTWi4fTLynhvJqZee91jcyMFrtYz9U3Jf/L8hvIyKVIzG/y3yCYxiw==}
     dependencies:
       '@rollup/pluginutils': 5.1.0
-      '@unhead/schema': 1.8.11
-      '@unhead/shared': 1.8.11
+      '@unhead/schema': 1.8.14
+      '@unhead/shared': 1.8.14
       magic-string: 0.30.8
       mlly: 1.6.1
       ufo: 1.4.0
-      unplugin: 1.8.0
+      unplugin: 1.9.0
       unplugin-ast: 0.8.2
     transitivePeerDependencies:
       - rollup
@@ -774,11 +774,26 @@ packages:
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
+    dev: false
+
+  /@unhead/schema@1.8.14:
+    resolution: {integrity: sha512-aM+syNezIXxCPJ99eG1WeONedfGXLAEGua3j+3+4GTjtH2T06E3SH6fcaHdfgjihnvMvo+C/lj2/rI6ShTVGLw==}
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+    dev: true
 
   /@unhead/shared@1.8.11:
     resolution: {integrity: sha512-Mz3pAJUq160mPXYFNUalfyEDQ0a6eRIbMlJFQ7HNy8shM+4kbeKgInoaa2EaFF8zRrhYvuLJZhyLk5kFINSmBg==}
     dependencies:
       '@unhead/schema': 1.8.11
+    dev: false
+
+  /@unhead/shared@1.8.14:
+    resolution: {integrity: sha512-ZuPfT7UKBIhb/E6+aVKPHwmAZUgja3YE4jc2p5K+eNTAGJD3MrNWmjRAA76ZUbKabdiYDr9/6mYWMdMWK0O87Q==}
+    dependencies:
+      '@unhead/schema': 1.8.14
+    dev: true
 
   /@unhead/vue@1.8.11(vue@3.4.21):
     resolution: {integrity: sha512-yEpQaBYQsqld3m6lexMP+Vf0+j2UdY/QIO98b7v2XBm200ruZmRvI4IJDMrI8cODVwSnwQWHDLF2upXlNeQ4Qg==}
@@ -883,7 +898,7 @@ packages:
       '@vue/compiler-ssr': 3.4.20
       '@vue/shared': 3.4.20
       estree-walker: 2.0.2
-      magic-string: 0.30.7
+      magic-string: 0.30.8
       postcss: 8.4.35
       source-map-js: 1.0.2
     dev: true
@@ -897,7 +912,7 @@ packages:
       '@vue/compiler-ssr': 3.4.21
       '@vue/shared': 3.4.21
       estree-walker: 2.0.2
-      magic-string: 0.30.7
+      magic-string: 0.30.8
       postcss: 8.4.35
       source-map-js: 1.0.2
 
@@ -2406,7 +2421,7 @@ packages:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
     engines: {node: '>=14'}
     dependencies:
-      mlly: 1.6.0
+      mlly: 1.6.1
       pkg-types: 1.0.3
     dev: true
 
@@ -2448,7 +2463,7 @@ packages:
     resolution: {integrity: sha512-0shqecEPgdFpnI3AP90epXyxZy9g6CRZ+SZ7BcqFwYmtFEnZ1jpevcV5HoyVnlDS9gCnc1UIg3Rsvp3Ci7r8OA==}
     engines: {node: '>=16.14.0'}
     dependencies:
-      magic-string: 0.30.7
+      magic-string: 0.30.8
     dev: true
 
   /magic-string@0.30.5:
@@ -2458,18 +2473,11 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /magic-string@0.30.7:
-    resolution: {integrity: sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-
   /magic-string@0.30.8:
     resolution: {integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -2531,7 +2539,7 @@ packages:
       acorn: 8.11.3
       pathe: 1.1.2
       pkg-types: 1.0.3
-      ufo: 1.3.2
+      ufo: 1.4.0
     dev: true
 
   /mlly@1.6.1:
@@ -3296,10 +3304,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  /ufo@1.3.2:
-    resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
-    dev: true
-
   /ufo@1.4.0:
     resolution: {integrity: sha512-Hhy+BhRBleFjpJ2vchUNN40qgkh0366FWJGqVLYBHev0vpHTrXSA0ryT+74UiW6KWsldNurQMKGqCm1M2zBciQ==}
     dev: true
@@ -3335,13 +3339,13 @@ packages:
       estree-walker: 3.0.3
       fast-glob: 3.3.2
       local-pkg: 0.5.0
-      magic-string: 0.30.7
-      mlly: 1.6.0
+      magic-string: 0.30.8
+      mlly: 1.6.1
       pathe: 1.1.2
       pkg-types: 1.0.3
       scule: 1.2.0
       strip-literal: 1.3.0
-      unplugin: 1.7.1
+      unplugin: 1.8.0
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -3356,7 +3360,7 @@ packages:
       '@rollup/pluginutils': 5.1.0
       ast-kit: 0.6.9
       magic-string-ast: 0.1.3
-      unplugin: 1.8.0
+      unplugin: 1.9.0
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -3461,6 +3465,16 @@ packages:
 
   /unplugin@1.8.0:
     resolution: {integrity: sha512-yGEQsodWICmgt7asHF7QzqDZYeEP9h14vyd9Lul98UnYf29pLZZLwI09z2QdTjwU/FCkum1SRvsK7cx232X8NA==}
+    dependencies:
+      acorn: 8.11.3
+      chokidar: 3.6.0
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.6.1
+    dev: true
+
+  /unplugin@1.9.0:
+    resolution: {integrity: sha512-14PslvMY3gNbXnQtNIRB566Q057L5Fe7f5LDEamxVi0QQVxoz5hrveBwwZLcKyHtZ09ysmipxRRj5Lv+BGz2Iw==}
+    engines: {node: '>=14.0.0'}
     dependencies:
       acorn: 8.11.3
       chokidar: 3.6.0
