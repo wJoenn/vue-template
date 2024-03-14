@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.11.27
     version: 20.11.27
   '@unhead/addons':
-    specifier: ^1.8.16
-    version: 1.8.16
+    specifier: ^1.8.18
+    version: 1.8.18
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.1.6)(vue@3.4.21)
@@ -747,12 +747,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.8.16:
-    resolution: {integrity: sha512-T58JsU8HB3qAJQxnXqpAoFT00Jg98+idl+3RG4mtB9+Sw5QApgDJ7SUvLnQkXcEssM667TrL9AgxkMiyIvpU9A==}
+  /@unhead/addons@1.8.18:
+    resolution: {integrity: sha512-dOjKRg7O+jTH80IfGd7AYpn8tRhLvS2NAO5kt2udUbsS/wIhDiw7dw6cla+rjXn32XtbAI7jySuWUpkObxhXWQ==}
     dependencies:
       '@rollup/pluginutils': 5.1.0
-      '@unhead/schema': 1.8.16
-      '@unhead/shared': 1.8.16
+      '@unhead/schema': 1.8.18
+      '@unhead/shared': 1.8.18
       magic-string: 0.30.8
       mlly: 1.6.1
       ufo: 1.4.0
@@ -769,31 +769,16 @@ packages:
       '@unhead/shared': 1.8.18
     dev: false
 
-  /@unhead/schema@1.8.16:
-    resolution: {integrity: sha512-q/AH7uWlE/KrYqZJWKRCguSV1f3U04PKqy1A3YA5ZppRAW2IHqNQ0P2ntc3b0dIdulhN23nkiH8sLyU7dAZdXw==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.8.18:
     resolution: {integrity: sha512-E4oq4juwGJkXPOJlc4Qdp1iVTe79H4TSMWkOB8sSlU44vhvcuZduFYH9CCn29JvtV/640Uaf2QeX4o+wX96LRQ==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
-    dev: false
-
-  /@unhead/shared@1.8.16:
-    resolution: {integrity: sha512-UNbCyO5WS2aimRdB5Ov38ZEDUl5kYI4vnnF5rCfmUKwexe2qb0HXixueMbNwQSoKKsGxTYm5pkIFCZlHCoZrVQ==}
-    dependencies:
-      '@unhead/schema': 1.8.16
-    dev: true
 
   /@unhead/shared@1.8.18:
     resolution: {integrity: sha512-2Tw5oyTjMkPn11UoR9AB3kSk2nDVG+7nCS4dZUwdxTMqndUnYyWoGB0EcO2WbK6YpkpulLIlfmiXVzWW4PTrWg==}
     dependencies:
       '@unhead/schema': 1.8.18
-    dev: false
 
   /@unhead/vue@1.8.18(vue@3.4.21):
     resolution: {integrity: sha512-aKsDCYAiQ27Cjs8nyUHaYNYOQjdhhobMswrelNddekGpk63Y25bRO2NT3DheAOqAAcH4Qdt7JIe5Bu4N1HG5Gg==}
