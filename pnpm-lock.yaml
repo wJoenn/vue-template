@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@unhead/vue':
-    specifier: ^1.9.2
-    version: 1.9.2(vue@3.4.21)
+    specifier: ^1.9.3
+    version: 1.9.3(vue@3.4.21)
   axios:
     specifier: ^1.6.8
     version: 1.6.8
@@ -24,7 +24,7 @@ dependencies:
 devDependencies:
   '@fullhuman/postcss-purgecss':
     specifier: ^5.0.0
-    version: 5.0.0(postcss@8.4.35)
+    version: 5.0.0(postcss@8.4.38)
   '@types/node':
     specifier: ^20.11.30
     version: 20.11.30
@@ -39,7 +39,7 @@ devDependencies:
     version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.3)
   autoprefixer:
     specifier: ^10.4.19
-    version: 10.4.19(postcss@8.4.35)
+    version: 10.4.19(postcss@8.4.38)
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -381,12 +381,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fullhuman/postcss-purgecss@5.0.0(postcss@8.4.35):
+  /@fullhuman/postcss-purgecss@5.0.0(postcss@8.4.38):
     resolution: {integrity: sha512-onDS/b/2pMRzqSoj4qOs2tYFmOpaspjTAgvACIHMPiicu1ptajiBruTrjBzTKdxWdX0ldaBb7wj8nEaTLyFkJw==}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
-      postcss: 8.4.35
+      postcss: 8.4.38
       purgecss: 5.0.0
     dev: true
 
@@ -786,11 +786,11 @@ packages:
       - rollup
     dev: true
 
-  /@unhead/dom@1.9.2:
-    resolution: {integrity: sha512-yREmUAfYJsPV9qR3G85MkdH+FdvsHf8AIJRm7FgQidrPxFr8tCICdID3+jXULz3oq8pFye1tAyHlBHXeq3SIpA==}
+  /@unhead/dom@1.9.3:
+    resolution: {integrity: sha512-l7KO6zv8T/yKpWOtcKww3k6RLENEiwiapoiPwtKlwWBFJekSjgM1+1AVu58yWqadFYHGP0/XhMwxKrOaOL+Vkw==}
     dependencies:
-      '@unhead/schema': 1.9.2
-      '@unhead/shared': 1.9.2
+      '@unhead/schema': 1.9.3
+      '@unhead/shared': 1.9.3
     dev: false
 
   /@unhead/schema@1.9.2:
@@ -798,21 +798,36 @@ packages:
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
+    dev: true
+
+  /@unhead/schema@1.9.3:
+    resolution: {integrity: sha512-emFHDYxn6u5SVwSRXMpYBCYKBua+GCjUwTLLdUupInthW3UraSUuXakmv06wDvejE8pTrBOPrGWescIYmwm69A==}
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+    dev: false
 
   /@unhead/shared@1.9.2:
     resolution: {integrity: sha512-jXQ4vK9wXf66hflOSBUXQKVsOLJrYVSOknDH+9PTwz5CIgJv/Y/o/NkRCJjyf5W7qFf605Te28lbTeLumT+BeQ==}
     dependencies:
       '@unhead/schema': 1.9.2
+    dev: true
 
-  /@unhead/vue@1.9.2(vue@3.4.21):
-    resolution: {integrity: sha512-wp0eOyb7tu2isSt1IiDGm194W/8DVL3cXZd8uvhVlhS9yPL3TzwrSNbvwx95fhfrGuXFraoLjp4SpZ2BCszFsg==}
+  /@unhead/shared@1.9.3:
+    resolution: {integrity: sha512-9wJ+wNmAVDCsCFKE3YHMwNkmFqKzCqQfp53ABJHQFOvY336s4nMWtiMNMjxF4aY4pJk8Qpwd8dRlgpLlyH0KZg==}
+    dependencies:
+      '@unhead/schema': 1.9.3
+    dev: false
+
+  /@unhead/vue@1.9.3(vue@3.4.21):
+    resolution: {integrity: sha512-DrTOTUOvKZlL7nVhsu9gCNXiGv/ErqHqSOrbNGqahlnOFJgJQD+9VVr904K/u75ISg00ksAzKfFPN15FgMovMw==}
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/schema': 1.9.2
-      '@unhead/shared': 1.9.2
+      '@unhead/schema': 1.9.3
+      '@unhead/shared': 1.9.3
       hookable: 5.5.3
-      unhead: 1.9.2
+      unhead: 1.9.3
       vue: 3.4.21(typescript@5.4.3)
     dev: false
 
@@ -1137,7 +1152,7 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /autoprefixer@10.4.19(postcss@8.4.35):
+  /autoprefixer@10.4.19(postcss@8.4.38):
     resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -1149,7 +1164,7 @@ packages:
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.35
+      postcss: 8.4.38
       postcss-value-parser: 4.2.0
     dev: true
 
@@ -3281,12 +3296,12 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
-  /unhead@1.9.2:
-    resolution: {integrity: sha512-CveP8bjL8gUJnZ1NqcMU1roe+VuM14wr0cJfNek/LCSI2i968mHDD5tbDXNcMSAVOhffKj6WkTngTUKNOZxA7g==}
+  /unhead@1.9.3:
+    resolution: {integrity: sha512-nV6d4ALJph73hCJT1tAd4z30Q2Gv8vNUvK0netM/EetL2scdggf9brcX3OyPqWhZbnFIOE+AouH2oE1KPznkcw==}
     dependencies:
-      '@unhead/dom': 1.9.2
-      '@unhead/schema': 1.9.2
-      '@unhead/shared': 1.9.2
+      '@unhead/dom': 1.9.3
+      '@unhead/schema': 1.9.3
+      '@unhead/shared': 1.9.3
       hookable: 5.5.3
     dev: false
 
