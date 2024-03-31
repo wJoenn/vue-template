@@ -1,17 +1,11 @@
 import fs from "fs"
-import path from "path"
 import VueRouter from "unplugin-vue-router/vite"
 import { getPascalCaseRouteName } from "unplugin-vue-router"
 import { rootDir } from "."
 
 const getLayouts = (layoutsDir = `${rootDir}/src/layouts`): string[] => fs
   .readdirSync(layoutsDir)
-  .flatMap(file => {
-    const filePath = path.join(layoutsDir, file)
-    const stat = fs.statSync(filePath)
-
-    return stat.isDirectory() ? getLayouts(filePath) : [file.replace(".vue", "")]
-  })
+  .map(file => file.replace(".vue", ""))
   .sort()
 
 const createLayoutDtsFile = () => {
@@ -39,6 +33,7 @@ const watchLayouts = () => {
 }
 
 const unpluginVueRouter = () => {
+  createLayoutDtsFile()
   watchLayouts()
 
   return VueRouter({

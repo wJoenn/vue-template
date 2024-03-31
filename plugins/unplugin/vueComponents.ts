@@ -45,6 +45,7 @@ const watchComponents = () => {
 }
 
 const unpluginVueComponents = () => {
+  createEslintComponentsFile()
   watchComponents()
 
   return Components({
