@@ -7,7 +7,7 @@ export default {
     autoprefixer,
     tailwindcss,
     purgecss({
-      content: ["./**/*.vue", "./index.html"]
+      content: ["./src/**/*.vue", "./index.html"]
     })
   ]
 }
