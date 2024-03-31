@@ -38,8 +38,14 @@ const createEslintComponentsFile = () => {
   fs.writeFileSync(`${rootDir}/.vue/eslint.components.config.js`, eslintConfig)
 }
 
+const watchComponents = () => {
+  fs.watch(`${rootDir}/src/components`, { recursive: true }, () => {
+    createEslintComponentsFile()
+  })
+}
+
 const unpluginVueComponents = () => {
-  createEslintComponentsFile()
+  watchComponents()
 
   return Components({
     dirs: ["src/components"],
