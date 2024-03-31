@@ -1,22 +1,25 @@
+import type { RouteMeta } from "vue-router/auto"
+
 const useLayout = () => {
   const route = useRoute()
 
-  let layoutName: string
-  const LayoutComponent = shallowRef<Component | string>("div")
+  let layoutName: NonNullable<RouteMeta["layout"]> | "" | "default"
+
+  const LayoutComponent = shallowRef<Component | "div">("div")
 
   watch(route, () => {
-    if (!route.meta.layout && import.meta.env.VITE_HAS_DEFAULT_LAYOUT === "false") {
-      LayoutComponent.value = "div"
+    const hasDefaultLayout = import.meta.env.VITE_HAS_DEFAULT_LAYOUT === "true"
+    const useDefaultLayout = !route.meta.layout
+
+    if (useDefaultLayout && !hasDefaultLayout) {
       layoutName = ""
-    } else if (!route.meta.layout) {
-      const defaultLayout = "default"
-      LayoutComponent.value = defineAsyncComponent<Component>(() => import(`../../layouts/${defaultLayout}.vue`))
-
+      LayoutComponent.value = "div"
+    } else if (useDefaultLayout) {
       layoutName = "default"
+      LayoutComponent.value = defineAsyncComponent<Component>(() => import(`../../layouts/${layoutName}.vue`))
     } else if (route.meta.layout !== layoutName) {
-      LayoutComponent.value = defineAsyncComponent<Component>(() => import(`../../layouts/${route.meta.layout}.vue`))
-
-      layoutName = route.meta.layout
+      layoutName = route.meta.layout!
+      LayoutComponent.value = defineAsyncComponent<Component>(() => import(`../../layouts/${layoutName}.vue`))
     }
   }, { immediate: true })
 
