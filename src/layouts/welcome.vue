@@ -2,8 +2,8 @@
   <div id="welcome">
     <section id="vue">
       <nav>
-        <router-link :to="{ name: 'Welcome' }" :class="{ active: !/other/.test(route.path)}">Main Tools</router-link>
-        <router-link :to="{ name: 'WelcomeOthers' }" :class="{ active: /other/.test(route.path)}">Other Tools</router-link>
+        <router-link :class="{ active: !/other/.test(route.path) }" :to="{ name: 'Welcome' }">Main Tools</router-link>
+        <router-link :class="{ active: /other/.test(route.path) }" :to="{ name: 'WelcomeOthers' }">Other Tools</router-link>
       </nav>
 
       <div class="content">
@@ -28,6 +28,10 @@
 
 <script setup lang="ts">
   import useWelcomeStore from "~/stores/WelcomeStore.ts"
+
+  defineSlots<{
+    default: unknown
+  }>()
 
   const route = useRoute()
   const welcomeStore = useWelcomeStore()

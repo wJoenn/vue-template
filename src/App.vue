@@ -7,6 +7,3 @@
 <script setup lang="ts">
   const Layout = useLayout()
 </script>
-
-<style lang="scss">
-</style>

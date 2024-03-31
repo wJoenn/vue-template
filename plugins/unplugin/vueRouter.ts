@@ -1,20 +1,19 @@
 import fs from "fs"
 import path from "path"
+import ViteRestart from "vite-plugin-restart"
 import VueRouter from "unplugin-vue-router/vite"
 import { getPascalCaseRouteName } from "unplugin-vue-router"
-import ViteRestart from "vite-plugin-restart"
+import { rootDir } from "."
 
-const getLayouts = (layoutsDir = path.resolve(__dirname, "../../../layouts")): string[] => (
-  fs
-    .readdirSync(path.resolve(__dirname, layoutsDir))
-    .flatMap(file => {
-      const filePath = path.join(layoutsDir, file)
-      const stat = fs.statSync(filePath)
+const getLayouts = (layoutsDir = `${rootDir}/src/layouts`): string[] => fs
+  .readdirSync(layoutsDir)
+  .flatMap(file => {
+    const filePath = path.join(layoutsDir, file)
+    const stat = fs.statSync(filePath)
 
-      return stat.isDirectory() ? getLayouts(filePath) : [file.replace(".vue", "")]
-    })
-    .sort()
-)
+    return stat.isDirectory() ? getLayouts(filePath) : [file.replace(".vue", "")]
+  })
+  .sort()
 
 const createLayoutDtsFile = () => {
   const layoutsDts = [
@@ -31,7 +30,7 @@ const createLayoutDtsFile = () => {
     "}"
   ].join("\n")
 
-  fs.writeFileSync(path.resolve(__dirname, "layouts.d.ts"), layoutsDts)
+  fs.writeFileSync(`${rootDir}/.vue/layouts.d.ts`, layoutsDts)
 }
 
 const unpluginVueRouter = () => {
@@ -42,7 +41,7 @@ const unpluginVueRouter = () => {
       restart: ["src/layouts/default.vue"]
     }),
     VueRouter({
-      dts: path.resolve(__dirname, "typed-router.d.ts"),
+      dts: `${rootDir}/.vue/typed-router.d.ts`,
       getRouteName: routeNode => getPascalCaseRouteName(routeNode)
     })
   ]

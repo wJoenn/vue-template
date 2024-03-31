@@ -1,6 +1,6 @@
 <template>
-  <a :href="tool.doc_url" target="_blank" class="logo">
-    <img :src="`/images/${tool.name}.png`" :alt="`${tool.name} logo`">
+  <a class="logo" :href="tool.doc_url" target="_blank">
+    <img :alt="`${tool.name} logo`" :src="`/images/${tool.name}.png`">
   </a>
 </template>
 

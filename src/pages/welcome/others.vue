@@ -4,7 +4,7 @@
       <li v-for="tool in tools" :key="tool.name" :class="tool.name">
         <div>
           <h2>{{ tool.title }}</h2>
-          <WelcomeLogoLink :tool="tool" />
+          <WelcomeLogoLink :tool />
         </div>
 
         <p>{{ tool.description }}</p>
@@ -22,40 +22,40 @@
 
   const tools = [
     {
-      name: "axios",
-      title: "Axios",
       description: "A promise based HTTP client for the browser and node.js",
-      doc_url: "https://axios-http.com/"
+      doc_url: "https://axios-http.com/",
+      name: "axios",
+      title: "Axios"
     },
     {
-      name: "eslint",
-      title: "esLint",
       description: "A configurable JavaScript linter to enforce code quality and best practices",
-      doc_url: "https://eslint.org/"
+      doc_url: "https://eslint.org/",
+      name: "eslint",
+      title: "esLint"
     },
     {
-      name: "pnpm",
-      title: "Pnpm",
       description: "A fast, disk space efficient, node package manager",
-      doc_url: "https://pnpm.io/"
+      doc_url: "https://pnpm.io/",
+      name: "pnpm",
+      title: "Pnpm"
     },
     {
-      name: "postcss",
-      title: "PostCSS",
       description: "A tool for transforming CSS with JavaScript",
-      doc_url: "https://postcss.or"
+      doc_url: "https://postcss.or",
+      name: "postcss",
+      title: "PostCSS"
     },
     {
-      name: "unjs",
-      title: "UnJS",
       description: "A robust ecosystem housing high-quality JavaScript utilities, libraries, and tools.",
-      doc_url: "https://unjs.io/"
+      doc_url: "https://unjs.io/",
+      name: "unjs",
+      title: "UnJS"
     },
     {
-      name: "vue-router",
-      title: "Vue Router",
       description: "An expressive, configurable and convenient routing library for Vue.js",
-      doc_url: "https://router.vuejs.org/"
+      doc_url: "https://router.vuejs.org/",
+      name: "vue-router",
+      title: "Vue Router"
     }
   ]
 </script>

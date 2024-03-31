@@ -2,6 +2,6 @@
   <div />
 </template>
 
-<script setup>
-  useRouter().push({ name: "Welcome" })
+<script setup lang="ts">
+  await useRouter().push({ name: "Welcome" })
 </script>

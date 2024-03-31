@@ -21,16 +21,19 @@
     "allowImportingTsExtensions": true,
 
     /* Linting */
-    "strict": true
+    "strict": true,
+
+    "types": [
+      "unplugin-vue-router/client"
+    ]
   },
   "include": [
+    ".vue/*.d.ts",
+    "plugins/vuenn/*.ts",
     "src/**/*.ts",
     "src/**/*.vue",
     "src/**/*.d.ts",
     "env.d.ts"
-  ],
-  "exclude": [
-    "src/plugins/unplugin/*.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

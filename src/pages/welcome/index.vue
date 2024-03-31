@@ -2,7 +2,7 @@
   <section id="tools">
     <ul>
       <li v-for="tool in tools" :key="tool.name" :class="tool.name">
-        <WelcomeLogoLink :tool="tool" />
+        <WelcomeLogoLink :tool />
 
         <div>
           <h2>{{ tool.title }}</h2>
@@ -23,42 +23,42 @@
 
   const tools = [
     {
-      name: "sass",
-      title: "Sass",
-      doc_url: "https://sass-lang.com/",
       description: `A powerful CSS preprocessor that extends the capabilities of traditional CSS with features like
         variables, nesting, mixins, and more, making it easier to write and maintain complex stylesheets for web
-        development projects.`
+        development projects.`,
+      doc_url: "https://sass-lang.com/",
+      name: "sass",
+      title: "Sass"
     },
     {
-      name: "tailwindcss",
-      title: "Tailwindcss",
-      doc_url: "https://tailwindcss.com/",
       description: `A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that
-       can be composed to build any design, directly in your markup. Tailwindcss' configuration can be fond in
-       <code>tailwind.config.js</code>`
+        can be composed to build any design, directly in your markup. Tailwindcss' configuration can be fond in
+        <code>tailwind.config.js</code>`,
+      doc_url: "https://tailwindcss.com/",
+      name: "tailwindcss",
+      title: "Tailwindcss"
     },
     {
-      name: "typescript",
-      title: "TypeScript",
-      doc_url: "https://www.typescriptlang.org/",
       description: `A strongly typed programming language that builds on JavaScript, giving you better tooling at any
-      scale. TypeScript's configuration can be found in <code>tsconfig.json</code>`
+        scale. TypeScript's configuration can be found in <code>tsconfig.json</code>`,
+      doc_url: "https://www.typescriptlang.org/",
+      name: "typescript",
+      title: "TypeScript"
     },
     {
-      name: "pinia",
-      title: "Pinia",
-      doc_url: "https://pinia.vuejs.org/",
       description: `An extremly light and intuitive State Management library for Vue with a focus on type safety,
-      extensibility and modularity.`
+        extensibility and modularity.`,
+      doc_url: "https://pinia.vuejs.org/",
+      name: "pinia",
+      title: "Pinia"
     },
     {
-      name: "vite",
-      title: "Vite",
-      doc_url: "https://vitejs.dev/",
       description: `A lightning-fast JavaScript bundler and development server that leverages ES modules to achieve
-      near-instantaneous development server startup and hot module replacement. Vite's configuration can be found in
-      <code>vite.config.js</code>`
+        near-instantaneous development server startup and hot module replacement. Vite's configuration can be found in
+        <code>vite.config.js</code>`,
+      doc_url: "https://vitejs.dev/",
+      name: "vite",
+      title: "Vite"
     }
   ]
 </script>

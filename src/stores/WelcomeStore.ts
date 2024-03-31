@@ -1,6 +1,6 @@
 const useWelcomeStore = defineStore("WelcomeStore", () => {
   const count = ref(0)
-  const counter = computed(() => (count.value ? `Counter is: ${count.value}` : "Click me"))
+  const counter = computed(() => count.value ? `Counter is: ${count.value}` : "Click me")
 
   const increment = () => {
     count.value++
