@@ -7,10 +7,6 @@ import { rootDir } from "."
 const unpluginAutoImport = () => AutoImport({
   dirs: [`${rootDir}/src/stores`, `${rootDir}/src/utils`, `${rootDir}/plugins/vuenn`],
   dts: `${rootDir}/.vue/auto-import.d.ts`,
-  eslintrc: {
-    enabled: true,
-    filepath: `${rootDir}/.vue/.eslintrc-auto-import.json`
-  },
   imports: [
     "pinia",
     "vue",
