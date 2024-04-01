@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.12.2",
     "@unhead/addons": "^1.9.4",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
