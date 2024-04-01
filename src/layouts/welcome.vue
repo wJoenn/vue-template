@@ -2,8 +2,14 @@
   <div id="welcome">
     <section id="vue">
       <nav>
-        <router-link :class="{ active: !/other/.test(route.path) }" :to="{ name: 'Welcome' }">Main Tools</router-link>
-        <router-link :class="{ active: /other/.test(route.path) }" :to="{ name: 'WelcomeOthers' }">Other Tools</router-link>
+        <RouterLink :class="{ active: !/other/.test(route.path) }" :to="{ name: 'Welcome' }">Main Tools</RouterLink>
+
+        <RouterLink
+          :class="{ active: /other/.test(route.path) }"
+          :to="{ name: 'WelcomeOthers' }"
+        >
+          Other Tools
+        </RouterLink>
       </nav>
 
       <div class="content">

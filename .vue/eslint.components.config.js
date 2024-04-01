@@ -6,6 +6,13 @@ export default {
   rules: {
     "vue/component-name-in-template-casing": ["error", "PascalCase", {
       globals: [
+        "KeepAlive",
+        "RouterLink",
+        "RouterView",
+        "Suspense",
+        "Teleport",
+        "Transition",
+        "TransitionGroup",
         "WelcomeLogoLink"
       ]
     }]

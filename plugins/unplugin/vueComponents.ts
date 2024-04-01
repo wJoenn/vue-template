@@ -3,6 +3,16 @@ import path from "path"
 import Components from "unplugin-vue-components/vite"
 import { rootDir } from "."
 
+const VUE_COMPONENTS = [
+  "KeepAlive",
+  "RouterLink",
+  "RouterView",
+  "Suspense",
+  "Teleport",
+  "Transition",
+  "TransitionGroup"
+]
+
 const getComponents = (componentsDir = `${rootDir}/src/components/`): string[] => fs
   .readdirSync(componentsDir)
   .flatMap(file => {
@@ -12,6 +22,7 @@ const getComponents = (componentsDir = `${rootDir}/src/components/`): string[] =
     const stat = fs.statSync(filePath)
     return stat.isDirectory() ? getComponents(`${filePath}/`) : [file.replace(".vue", "")]
   })
+  .concat(VUE_COMPONENTS)
   .sort()
 
 const createEslintComponentsFile = () => {
