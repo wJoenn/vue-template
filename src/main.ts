@@ -7,7 +7,4 @@ const router = createRouter({
   history: createWebHistory()
 })
 
-app
-  .use(pinia)
-  .use(router)
-  .mount("#app")
+app.use(pinia).use(router).mount("#app")

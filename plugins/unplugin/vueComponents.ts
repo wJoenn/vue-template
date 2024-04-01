@@ -3,19 +3,16 @@ import path from "path"
 import Components from "unplugin-vue-components/vite"
 import { rootDir } from "."
 
-const getComponents = (componentsDir = `${rootDir}/src/components/`): string[] => {
-  const components = fs.readdirSync(componentsDir)
+const getComponents = (componentsDir = `${rootDir}/src/components/`): string[] => fs
+  .readdirSync(componentsDir)
+  .flatMap(file => {
+    const filePath = `${componentsDir}${file}`
+    if (path.extname(filePath) === ".ts") { return [] }
 
-  return components
-    .flatMap(file => {
-      const filePath = `${componentsDir}${file}`
-      const stat = fs.statSync(filePath)
-      if (path.extname(filePath) === ".ts") { return [] }
-
-      return stat.isDirectory() ? getComponents(`${filePath}/`) : [file.replace(".vue", "")]
-    })
-    .sort()
-}
+    const stat = fs.statSync(filePath)
+    return stat.isDirectory() ? getComponents(`${filePath}/`) : [file.replace(".vue", "")]
+  })
+  .sort()
 
 const createEslintComponentsFile = () => {
   const eslintConfig = [
