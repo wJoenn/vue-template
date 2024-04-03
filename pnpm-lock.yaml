@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^8.57.0
     version: 8.57.0
   eslint-config-joenn:
-    specifier: ^0.2.10
-    version: 0.2.10(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3)
+    specifier: ^1.0.0
+    version: 1.0.0(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3)
   sass:
     specifier: ^1.72.0
     version: 1.72.0
@@ -1601,8 +1601,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /eslint-config-joenn@0.2.10(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3):
-    resolution: {integrity: sha512-hKeopgPPRibmWDDrW1IXTOCiO4Qm7NiyGlDOAigVmT/3VEDDdcx1PiKPFls7k9ir1TIEQi13NGTXVM4YHvFTYA==}
+  /eslint-config-joenn@1.0.0(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3):
+    resolution: {integrity: sha512-DBQtwKOM+ppXAWv/wMeUuXBXQmhfT/1vDDD6Lkt6J6Z3obM2zPa6/WJzqxThtlqh3DLYlt11THpuSjnlqCjnsw==}
     peerDependencies:
       eslint: '>= 8.57.0'
     dependencies:
