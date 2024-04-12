@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^20.12.7
     version: 20.12.7
   '@unhead/addons':
-    specifier: ^1.9.4
-    version: 1.9.4
+    specifier: ^1.9.5
+    version: 1.9.5
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.2.8)(vue@3.4.21)
@@ -849,13 +849,13 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unhead/addons@1.9.4:
-    resolution: {integrity: sha512-LSvvOQPPHtGX6xh58iB4zfsR8/yDX7HR0eK42FIyeUaCDMuO+hXy1xGiJQM0V7V/eaZFXY1gYkfkmccfMP37Jw==}
+  /@unhead/addons@1.9.5:
+    resolution: {integrity: sha512-9SBZnio99Ff0xRy3Mpaqb9fHF5tc3ae4/bSmYuktpW8UtsFPbtZE7xy+D5jyFqpkU1XhPRf9beJItlJKmUtlKg==}
     dependencies:
       '@rollup/pluginutils': 5.1.0
-      '@unhead/schema': 1.9.4
-      '@unhead/shared': 1.9.4
-      magic-string: 0.30.8
+      '@unhead/schema': 1.9.5
+      '@unhead/shared': 1.9.5
+      magic-string: 0.30.9
       mlly: 1.6.1
       ufo: 1.5.3
       unplugin: 1.10.1
@@ -871,31 +871,16 @@ packages:
       '@unhead/shared': 1.9.5
     dev: false
 
-  /@unhead/schema@1.9.4:
-    resolution: {integrity: sha512-/J6KYQ+aqKO5uLDTU9BXfiRAfJ3mQNmF5gh3Iyd4qZaWfqjsDGYIaAe4xAGPnJxwBn6FHlnvQvZBSGqru1MByw==}
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-    dev: true
-
   /@unhead/schema@1.9.5:
     resolution: {integrity: sha512-n0upGPplBn5Y/4PIqKp7/tzOhz7USos5lFjf8UKvMNoOIitEa+avP2u7gRQ9yOhHmOAH9AXDeX7mhSvhO+Tqxw==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
-    dev: false
-
-  /@unhead/shared@1.9.4:
-    resolution: {integrity: sha512-ErP6SUzPPRX9Df4fqGlwlLInoG+iBiH0nDudRuIpoFGyTnv1uO9BQ+lfFld8s1gI1WCdoBwVkISBp9/f/E/GLA==}
-    dependencies:
-      '@unhead/schema': 1.9.4
-    dev: true
 
   /@unhead/shared@1.9.5:
     resolution: {integrity: sha512-WN2T8th1wYn4A1bb6o8Z59wNVMPkD6YdNQIlmSbEP9zuSYyVEh3BIxqSdxWM/xl8atN8fNwVW06knaF51VmKXA==}
     dependencies:
       '@unhead/schema': 1.9.5
-    dev: false
 
   /@unhead/vue@1.9.5(vue@3.4.21):
     resolution: {integrity: sha512-L3yDB6Mwm92gJNPqZApMwfGluS0agR0HIizkXCKKz3WkZ+ef/negMwTNGpTtd+uqh/+hSyG73Bl4yySuPsD4nA==}
@@ -2407,7 +2392,7 @@ packages:
     resolution: {integrity: sha512-0shqecEPgdFpnI3AP90epXyxZy9g6CRZ+SZ7BcqFwYmtFEnZ1jpevcV5HoyVnlDS9gCnc1UIg3Rsvp3Ci7r8OA==}
     engines: {node: '>=16.14.0'}
     dependencies:
-      magic-string: 0.30.8
+      magic-string: 0.30.9
     dev: true
 
   /magic-string@0.30.5:
@@ -2422,6 +2407,13 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /magic-string@0.30.9:
+    resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
