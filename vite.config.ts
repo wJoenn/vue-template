@@ -1,7 +1,6 @@
 import fs from "fs"
 import path from "path"
 import vue from "@vitejs/plugin-vue"
-import UnheadVite from "@unhead/addons/vite"
 import { defineConfig } from "vite"
 import { unpluginAutoImport, unpluginVueComponents, unpluginVueRouter } from "./plugins/unplugin"
 
@@ -16,7 +15,6 @@ export default defineConfig({
     }
   },
   plugins: [
-    UnheadVite(),
     unpluginAutoImport(),
     unpluginVueComponents(),
     unpluginVueRouter(),

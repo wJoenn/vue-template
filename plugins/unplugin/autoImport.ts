@@ -12,7 +12,6 @@ const unpluginAutoImport = () => AutoImport({
     "vue",
     VueRouterAutoImports,
     {
-      "@unhead/vue": ["useHead", "useSeoMeta"],
       "axios": [["default", "axios"]],
       "vue-router/auto": ["createRouter", "createWebHistory"]
     }
