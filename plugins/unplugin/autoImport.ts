@@ -10,6 +10,7 @@ const unpluginAutoImport = () => AutoImport({
   imports: [
     "pinia",
     "vue",
+    "@vueuse/core",
     VueRouterAutoImports,
     {
       "axios": [["default", "axios"]],
