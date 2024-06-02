@@ -13,7 +13,7 @@ const unpluginAutoImport = () => AutoImport({
     "@vueuse/core",
     VueRouterAutoImports,
     {
-      "axios": [["default", "axios"]],
+      "ofetch": [["ofetch", "$fetch"]],
       "vue-router/auto": ["createRouter", "createWebHistory"]
     }
   ]

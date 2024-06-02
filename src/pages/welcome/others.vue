@@ -18,12 +18,6 @@
 
   const tools = [
     {
-      description: "A promise based HTTP client for the browser and node.js",
-      doc_url: "https://axios-http.com/",
-      name: "axios",
-      title: "Axios"
-    },
-    {
       description: "A configurable JavaScript linter to enforce code quality and best practices",
       doc_url: "https://eslint.org/",
       name: "eslint",
@@ -72,10 +66,6 @@
         flex-direction: column;
         gap: 10px;
         padding: 20px;
-
-        &.axios h2 {
-          color: #5a29e4 ;
-        }
 
         &.eslint h2 {
           color: #6464e2 ;
