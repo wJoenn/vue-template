@@ -20,7 +20,7 @@
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "@types/node": "^20.13.0",
     "@vitejs/plugin-vue": "^5.0.5",
-    "@vueuse/core": "^10.9.0",
+    "@vueuse/core": "^10.10.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-joenn": "^1.0.5",
