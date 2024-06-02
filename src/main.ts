@@ -1,10 +1,12 @@
+import { routes } from "vue-router/auto-routes"
 import App from "./App.vue"
 import "./assets/stylesheets/application.scss"
 
 const app = createApp(App)
 const pinia = createPinia()
 const router = createRouter({
-  history: createWebHistory()
+  history: createWebHistory(),
+  routes
 })
 
 app.use(pinia).use(router).mount("#app")
