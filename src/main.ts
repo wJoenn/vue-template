@@ -1,6 +1,6 @@
 import { routes } from "vue-router/auto-routes"
 import App from "./App.vue"
-import "./assets/stylesheets/application.scss"
+import "./assets/stylesheets/index.css"
 
 const app = createApp(App)
 const pinia = createPinia()

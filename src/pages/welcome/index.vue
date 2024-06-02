@@ -59,7 +59,7 @@
   ]
 </script>
 
-<style scoped lang="scss">
+<style scoped>
   #tools {
     ul {
       display: flex;

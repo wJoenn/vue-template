@@ -7,13 +7,6 @@ import { unpluginAutoImport, unpluginVueComponents, unpluginVueRouter } from "./
 fs.mkdir(".vue", () => null)
 
 export default defineConfig({
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: "@import './src/assets/stylesheets/config/_variables.scss';"
-      }
-    }
-  },
   plugins: [
     unpluginAutoImport(),
     unpluginVueComponents(),
