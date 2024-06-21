@@ -1,14 +1,20 @@
 import fs from "fs"
+import path from "path"
 import VueRouter from "unplugin-vue-router/vite"
 import { getPascalCaseRouteName } from "unplugin-vue-router"
-import { rootDir } from "."
 
-const getLayouts = (layoutsDir = `${rootDir}/src/layouts`): string[] => fs
-  .readdirSync(layoutsDir)
-  .map(file => file.replace(".vue", ""))
+const rootDir = path.resolve(__dirname, "../..")
+
+/**
+ * returns an array of layout name with quotation marks
+ * @example ['"default"']
+ * */
+const _getLayouts = (): string[] => fs
+  .readdirSync(path.resolve(__dirname, "../../src/layouts"))
+  .map(file => `"${file.replace(".vue", "")}"`)
   .sort()
 
-const createLayoutDtsFile = () => {
+const _createLayoutDtsFile = () => {
   const layoutsDts = [
     "/* eslint-disable */",
     "/* prettier-ignore */",
@@ -18,7 +24,7 @@ const createLayoutDtsFile = () => {
     "",
     "declare module 'vue-router' {",
     "  interface RouteMeta {",
-    `    layout?: ${getLayouts().map(layout => `"${layout}"`).join(" | ")}`,
+    `    layout?: ${_getLayouts().join(" | ")}`,
     "  }",
     "}"
   ].join("\n")
@@ -26,20 +32,16 @@ const createLayoutDtsFile = () => {
   fs.writeFileSync(`${rootDir}/.vue/layouts.d.ts`, layoutsDts)
 }
 
-const watchLayouts = () => {
-  fs.watch(`${rootDir}/src/layouts`, () => {
-    createLayoutDtsFile()
-  })
+const _watchLayouts = () => {
+  fs.watch(`${rootDir}/src/layouts`, _createLayoutDtsFile)
 }
 
-const unpluginVueRouter = () => {
-  createLayoutDtsFile()
-  watchLayouts()
+export const unpluginVueRouter = () => {
+  _createLayoutDtsFile()
+  _watchLayouts()
 
   return VueRouter({
     dts: `${rootDir}/.vue/typed-router.d.ts`,
     getRouteName: routeNode => getPascalCaseRouteName(routeNode)
   })
 }
-
-export default unpluginVueRouter

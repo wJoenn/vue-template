@@ -1,10 +1,12 @@
 import type { PluginOption } from "vite"
 
+import path from "path"
 import AutoImport from "unplugin-auto-import/vite"
 import { VueRouterAutoImports } from "unplugin-vue-router"
-import { rootDir } from "."
 
-const unpluginAutoImport = () => AutoImport({
+const rootDir = path.resolve(__dirname, "../..")
+
+export const unpluginAutoImport = () => AutoImport({
   dirs: [`${rootDir}/src/stores`, `${rootDir}/src/utils`, `${rootDir}/plugins/vuenn`],
   dts: `${rootDir}/.vue/auto-import.d.ts`,
   imports: [
@@ -18,5 +20,3 @@ const unpluginAutoImport = () => AutoImport({
     }
   ]
 }) as PluginOption
-
-export default unpluginAutoImport

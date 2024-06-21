@@ -1,6 +1,6 @@
 import type { RouteMeta } from "vue-router/auto"
 
-const useLayout = () => {
+export const useLayout = () => {
   const route = useRoute()
 
   let layoutName: NonNullable<RouteMeta["layout"]> | "" | "default"
@@ -35,5 +35,3 @@ const useLayout = () => {
 
   return LayoutComponent
 }
-
-export default useLayout
